@@ -4,6 +4,8 @@
   padding: 10px;
   align-items: center;
   justify-content: center;
+  background-color: #e6e3e5;
+  border-radius: 5px;
 
   .OrderCardContent {
     display: flex;
@@ -27,6 +29,7 @@
     justify-self: center;
     justify-content: space-between;
     padding: 10px;
+    font-weight: bold;
 
     .DetailsLabels {
       display: flex;

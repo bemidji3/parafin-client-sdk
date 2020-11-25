@@ -1,3 +1,9 @@
-.Modal {
+.ui.modal.transition.visible.active.Modal {
+  .header {
+    text-align: center;
+  }
 
+  .content {
+    padding: 15px;
+  }
 }

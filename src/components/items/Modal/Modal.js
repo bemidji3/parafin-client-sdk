@@ -2,6 +2,7 @@ import React from "react";
 import { Modal as SemanticModal } from "semantic-ui-react";
 import classNames from "classnames";
 import "semantic-ui-css/components/modal.css";
+import "./Modal.scss";
 
 function Modal({ className, children, ...restProps }) {
     const extraClassName = classNames(`Modal`, {

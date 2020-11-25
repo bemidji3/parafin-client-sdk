@@ -12,6 +12,9 @@ function MainLayout({formData, handleChange, setLoanSubmitted, loanSubmitted, on
     const {loan_amount} = formData;
     const onCloseModal = () => {
         setOpen(false);
+        if(loanSubmitted) {
+            setLoanSubmitted(false);
+        }
     };
     return (
         <div className="Main">
@@ -47,7 +50,7 @@ function MainLayout({formData, handleChange, setLoanSubmitted, loanSubmitted, on
                         content="Close"
                         labelPosition='right'
                         icon='window close'
-                        onClick={() => setOpen(false)}
+                        onClick={onCloseModal}
                         negative
                     />
                 </ModalActions>

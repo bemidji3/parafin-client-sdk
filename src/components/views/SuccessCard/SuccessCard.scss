@@ -5,4 +5,25 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  .ui.card.Card {
+    height: 411px;
+
+    .header {
+      margin-bottom: 0;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      .SuccessCardMainContent {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
 }

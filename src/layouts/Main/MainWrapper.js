@@ -11,7 +11,6 @@ function MainLayoutWrapper(){
 
     const onSubmit = () => {
         createNewLoan(formData).then(response => {
-            console.log("response ", response);
             if(response.status === 200){
                 setLoanSubmitted(true);
             }
