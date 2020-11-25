@@ -1,0 +1,86 @@
+.OrderCard {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+
+  .OrderCardContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .CardHeaderArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .OrderCardFormDetails {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    .DetailsLabels {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .DetailsValues {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+  }
+
+  .FormActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .OrderCardForm {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 600px;
+    margin-right: 25px;
+  }
+
+  .CardExpandedView {
+    margin-left: 20px;
+
+    .ExpandedViewInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      .ExpandedViewFacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .ToggleIcon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+  }
+}
+
+.ui.card.Card.CardExpandedView { //needed to override semantic ui react styles
+  margin-left: 20px;
+}
