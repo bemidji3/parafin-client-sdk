@@ -4,8 +4,10 @@ import OrderCard from "../../components/views/OrderCard";
 import SuccessCard from "../../components/views/SuccessCard";
 import Button from "../../components/items/Button";
 import formatPrice from "../../lib/formatPrice";
+import "./Main.scss";
 
-function MainLayout({formData, handleChange, loanSubmitted, onSubmitLoanRequest, loanMetaData}){
+
+function MainLayout({formData, handleChange, setLoanSubmitted, loanSubmitted, onSubmitLoanRequest, loanMetaData, resetForm}){
     const [open, setOpen] = useState(false);
     const {loan_amount} = formData;
     const onCloseModal = () => {
@@ -26,7 +28,9 @@ function MainLayout({formData, handleChange, loanSubmitted, onSubmitLoanRequest,
                     {loanSubmitted ? (
                         <SuccessCard
                             payoutAmount={loan_amount}
-                            onButtonClick={onCloseModal}
+                            setOpen={setOpen}
+                            setLoanSubmitted={setLoanSubmitted}
+                            resetForm={resetForm}
                         />
                     ) : (
                         <OrderCard

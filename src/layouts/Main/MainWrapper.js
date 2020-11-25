@@ -12,7 +12,9 @@ function MainLayoutWrapper(){
     const onSubmit = () => {
         createNewLoan(formData).then(response => {
             console.log("response ", response);
-            setLoanSubmitted(true);
+            if(response.status === 200){
+                setLoanSubmitted(true);
+            }
         });
     };
 
@@ -21,7 +23,8 @@ function MainLayoutWrapper(){
     const {
         formData,
         handleChange,
-        simpleSubmit
+        simpleSubmit,
+        resetForm,
     } = useForm(initialValues, onSubmit);
 
 
@@ -30,8 +33,10 @@ function MainLayoutWrapper(){
             formData={formData}
             handleChange={handleChange}
             loanSubmitted={loanSubmitted}
+            setLoanSubmitted={setLoanSubmitted}
             onSubmitLoanRequest={simpleSubmit}
             loanMetaData={loanMetaData}
+            resetForm={resetForm}
         />
     )
 }

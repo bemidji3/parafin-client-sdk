@@ -7,7 +7,12 @@ import Header from "../../items/Header";
 import formatPrice from "../../../lib/formatPrice";
 import "./SuccessCard.scss";
 
-function SuccessCard({payoutAmount, onButtonClick}) {
+function SuccessCard({payoutAmount, setOpen, setLoanSubmitted, resetForm}) {
+    const onClickDone = () => {
+        setOpen(false);
+        setLoanSubmitted(false);
+        resetForm();
+    };
     return (
         <div className="SuccessCard">
             <Card>
@@ -31,7 +36,7 @@ function SuccessCard({payoutAmount, onButtonClick}) {
                 </CardContent>
                 <Button
                     content="Done"
-                    onClick={() => onButtonClick}
+                    onClick={onClickDone}
                     positive
                 />
             </Card>
